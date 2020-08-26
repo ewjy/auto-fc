@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>[Prototype] FactsComb</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="https://proto.wjy.tw/assets/img/favicon.png" rel="icon">
+  <link href="https://proto.wjy.tw/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="https://proto.wjy.tw/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://proto.wjy.tw/assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="https://proto.wjy.tw/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="https://proto.wjy.tw/assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="https://proto.wjy.tw/assets/vendor/line-awesome/css/line-awesome.min.css" rel="stylesheet">
+  <link href="https://proto.wjy.tw/assets/vendor/owl.carousel/https://proto.wjy.tw/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="https://proto.wjy.tw/assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="https://proto.wjy.tw/assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Serenity - v2.1.0
+  * Template URL: https://bootstrapmade.com/serenity-bootstrap-corporate-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex">
+
+      <div class="logo mr-auto">
+        <h1 class="text-light"><a href="index.html">FactsComb<sup>Proto</sup></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="https://proto.wjy.tw/assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="index.html">首頁</a></li>
+
+          <li class="drop-down"><a href="#">關於我們</a>
+            <ul>
+              <li><a href="about.html">平台簡介</a></li>
+              <li><a href="team.html">技術團隊</a></li>
+
+              <li class="drop-down"><a href="#">系統介紹</a>
+                <ul>
+                  <li><a href="#">查證系統</a></li>
+                  <li><a href="#">回溯系統</a></li>
+                  <li><a href="#">原始碼倉庫</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="#features">功能</a></li>
+          <li><a href="blog.html">查核資料庫</a></li>
+          <li><a href="portfolio.html">聯絡我們</a></li>
+
+          <!--<li class="get-started"><a href="#get-started">Get Started</a></li>-->
+        </ul>
+      </nav><!-- .nav-menu -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+    <div class="hero-container" data-aos="fade-up">
+      <h1>自動化資訊查核追踨平台</h1>
+      <h2>為你快速分析資訊，提供初步判斷方向。</h2>
+	  <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="請輸入欲查證資訊" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="button" data-toggle="modal" data-target="#fact-warn"><i class="icofont-search"></i></button>
+  </form>		
+  <form name="search" action="test.py" method="get">
+Search: <input type="text" name="searchbox">
+<input type="submit" value="Submit">
+</form> 
+    </div>	  
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row justify-content-end">
+          <div class="col-lg-11">
+            <div class="row justify-content-end">
+
+              <div class="col-lg-3 col-md-5 col-6 d-md-flex align-items-md-stretch">
+                <div class="count-box py-5">
+                  <i class="icofont-people"></i>
+                  <span data-toggle="counter-up">128</span>
+                  <p>本月使用人次</p>
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-5 col-6 d-md-flex align-items-md-stretch">
+                <div class="count-box py-5">
+                  <i class="icofont-warning"></i>
+                  <span data-toggle="counter-up">64</span>
+                  <p>本月內容農場觸發次數</p>
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-5 col-6 d-md-flex align-items-md-stretch">
+                <div class="count-box pb-5 pt-0 pt-lg-5">
+                  <i class="icofont-error"></i>
+                  <span data-toggle="counter-up">72</span>
+                  <p>本月查證為假資訊則數</p>
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-5 col-6 d-md-flex align-items-md-stretch">
+                <div class="count-box pb-5 pt-0 pt-lg-5">
+                  <i class="icofont-tick-mark"></i>
+                  <span data-toggle="counter-up">15</span>
+                  <p>本月查證為真資訊則數</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-12 pt-12 pt-lg-0 content">
+            <h3>在混亂的資訊大爆炸時代，讓自己站穩腳步吧。</h3>
+            <p class="font-italic">
+              現今網路充斥大量可疑資訊，混淆我們的視聽。我們希望透過這個平台的技術，幫助各位面對可疑資訊時作初步判斷。
+            </p>
+            <ul>
+              <li><i class="bx bx-check-double"></i> 自動化對比查核中心報告和內容農場清單，減少手動進行多重步驟的不便。</li>
+              <li><i class="bx bx-check-double"></i> 即時回傳初步檢測結果，幫助快速判斷。</li>
+              <li><i class="bx bx-check-double"></i> 深入回溯假資訊傳播鏈，協助揪出幕後黑手。</li>
+            </ul>
+            <p>
+              本平台目前仍處原型展示及測試階段，無法保證所有查核結果準確無誤，請以專業查核機構發表的最終報告為準。
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Cta Section ======= -->
+    <section id="cta" class="cta">
+      <div class="container" data-aos="fade-in">
+
+        <div class="text-center">
+          <h3>助我們一臂之力</h3>
+          <p> 在改進自動化系統以及不實資訊識讀能力等方面，我們還有很長的路要走。<br>歡迎同樣對這些議題有興趣的你加入我們的團隊，或為我們提供一些寶貴的意見。</p>
+          <a class="cta-btn" href="#">聯絡我們</a>
+        </div>
+
+      </div>
+    </section><!-- End Cta Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="features" class="services  section-bg ">
+      <div class="container">
+
+        <div class="section-title pt-5" data-aos="fade-up">
+          <h2>功能</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div class="icon-box" data-aos="fade-up">
+              <div class="icon"><i class="las la-file-alt" style="color: #3fcdc7;"></i></div>
+              <h4 class="title"><a href="">原始碼倉庫</a></h4>
+              <p class="description">我們開放系統的原始碼，供大家參考並歡迎做出改良版本，也希望大家能在發現任何問題時通報我們。</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="icon-box" data-aos="fade-up">
+              <div class="icon"><i class="las la-clock" style="color: #4680ff;"></i></div>
+              <h4 class="title"><a href="">未來展望</a></h4>
+              <p class="description">此處會展示我們未來計劃及執行進度。若有任何希望添加的功能項目，請不吝告知。</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-info">
+            <h3>FactsComb</h3>
+            <p>本項目是國立成功大學第十學院2020年暑期Coding-X課程小組專案的成果。</p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><a href="#">首頁</a></li>
+              <li><a href="#">關於我們</a></li>
+              <li><a href="#">系統運作儀表板</a></li>
+              <li><a href="#">使用條款</a></li>
+              <li><a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-8 footer-contact">
+            <h4>聯絡我們</h4>
+            <p>
+              台灣 <br>
+              701401台南市東區大學路1號<br>
+              國立成功大學 <br>
+              <strong>電話：</strong>06-2757575<br>
+              <strong>Email:</strong> example@email.ncku.edu.tw<br>
+            </p>
+
+            <!--<div class="social-links">
+              <a href="#" class="twitter"><i class="icofont-twitter"></i></a>
+              <a href="#" class="facebook"><i class="icofont-facebook"></i></a>
+              <a href="#" class="instagram"><i class="icofont-instagram"></i></a>
+              <a href="#" class="google-plus"><i class="icofont-skype"></i></a>
+              <a href="#" class="linkedin"><i class="icofont-linkedin"></i></a>
+            </div>-->
+
+          </div>
+
+          <!--<div class="col-lg-3 col-md-6 footer-newsletter">
+            <h4>Our Newsletter</h4>
+            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna veniam enim veniam illum dolore legam minim quorum culpa amet magna export quem marada parida nodela caramase seza.</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+          </div>-->
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>National Cheng Kung University</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/serenity-bootstrap-corporate-template/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="https://proto.wjy.tw/assets/vendor/jquery/jquery.min.js"></script>
+  <script src="https://proto.wjy.tw/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="https://proto.wjy.tw/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="https://proto.wjy.tw/assets/vendor/php-email-form/validate.js"></script>
+  <script src="https://proto.wjy.tw/assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="https://proto.wjy.tw/assets/vendor/counterup/counterup.min.js"></script>
+  <script src="https://proto.wjy.tw/assets/vendor/venobox/venobox.min.js"></script>
+  <script src="https://proto.wjy.tw/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="https://proto.wjy.tw/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="https://proto.wjy.tw/assets/vendor/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="https://proto.wjy.tw/assets/js/main.js"></script>
+<!-- The Modal -->
+  <div class="modal fade" id="fact-warn">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title"><font color="orange">對應到查核報告</font></h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          系統對應到以下可能相關的查核報告：
+		  <p><a href="https://tfc-taiwan.org.tw/articles/4092" target="_blank">[TFC] 【部分錯誤】網傳訊息宣稱「研究證明：Covid-19 已產生為名爲“D614G”的突變...導致病毒傳染力暴增10倍以上」？</a><br><a href="https://www.mygopen.com/2020/07/d614g-covid-19.html" target="_blank">[MyGoPen] 【誤導】研究證明Covid-19突變為D614G病毒？傳染力暴增10倍？部分錯誤</a></p>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+		  <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#cf-warn">查看詳情</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+<!-- The Modal -->
+  <div class="modal fade" id="cf-warn">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title"><font color="red">內容農場警告</font></h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          <p>警告：內容農場網站也有相關文章，請慎重判斷！</p>
+      <p>https://kknews.cc/health/pb9zo62.html<br>新冠重要發現：需警惕！多個研究團隊發現，發生D614G突變的新冠病毒，感染人類細胞的能力或提高9倍左右</p>
+    <p></p>
+    <p>若上方沒有列出您在尋找的資訊，可以選擇進一步追蹤。</p>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+      <button type="button" class="btn btn-primary" onclick="location.href='search.html'" data-dismiss="modal">進一步追蹤</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+</body>
+
+</html>
