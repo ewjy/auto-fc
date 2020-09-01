@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'main_app.apps.MainAppConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -73,11 +74,17 @@ WSGI_APPLICATION = 'herokud.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
-
+import pymysql
+pymysql.version_info = (1, 4, 13, "final", 0)
+pymysql.install_as_MySQLdb()
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.',
-        'NAME': 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'fake_news',
+        'HOST': '127.0.0.1',
+        'POST': '3306',
+        'USER': 'root',
+        'PASSWORD': 'SEVENteen=13',
     }
 }
 
