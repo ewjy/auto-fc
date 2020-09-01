@@ -19,12 +19,5 @@ from main_app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-<<<<<<< Updated upstream
-    path('', views.index),
-    path('index/', views.index),
-    path('learn/', views.learn),
-    path('about/', views.about),
-=======
-    path('', include('main_app.urls')),
->>>>>>> Stashed changes
+    path('', include("main_app.urls")),
 ]

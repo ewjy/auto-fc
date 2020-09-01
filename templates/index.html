@@ -43,16 +43,16 @@
     <div class="container d-flex">
 
       <div class="logo mr-auto">
-        <h1 class="text-light"><a href="index.html">FactsComb<sup>Beta</sup></a></h1>
+        <h1 class="text-light"><a href="{%url 'index' %}">FactsComb<sup>Beta</sup></a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html"><img src="{% static 'assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li class="active"><a href="/index/">首頁</a></li>
-          <li><a href="/learn/">提升識讀力</a></li>                    
-          <li><a href="/about/">關於我們</a></li>          
+          <li class="active"><a href="{%url 'index' %}">首頁</a></li>
+          <li><a href="{%url 'learn' %}">提升識讀力</a></li>                    
+          <li><a href="{%url 'about' %}">關於我們</a></li>          
       
           <!--<li class="get-started"><a href="#get-started">Get Started</a></li>-->
         </ul>
@@ -169,9 +169,9 @@
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>本站鏈結</h4>
             <ul>
-              <li><a href="index.html">首頁</a></li>
-              <li><a href="learn.html">提升識讀力</a></li>
-              <li><a href="about.html">關於我們</a></li>            
+              <li><a href="{%url 'index' %}">首頁</a></li>
+              <li><a href="{%url 'learn' %}">提升識讀力</a></li>
+              <li><a href="{%url 'about' %}">關於我們</a></li>            
             </ul>
           </div>
 
