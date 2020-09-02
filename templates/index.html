@@ -66,6 +66,7 @@
     <div class="hero-container" data-aos="fade-up">
       <h1>自動化資訊查核追踨平台</h1>
       <h2>為你快速分析資訊，提供初步判斷方向。</h2> 
+<form action="{% url 'results_title' %}">
 <div class="input-group">
   <div class="input-group-prepend">
   <select class="form-control">
@@ -74,13 +75,14 @@
   </select>
 
   </div>
-  <input type="text" name="contents" class="form-control" placeholder="請輸入查詢內容">
+  <input type="text" name="query" class="form-control" placeholder="請輸入查詢內容">
   <div class="input-group-append">
       <button class="btn btn-secondary" type="submit">
         <i class="icofont-search"></i>
       </button>
 </div>
     </div>
+  </form>
   </section><!-- End Hero -->
 
   <main id="main">
