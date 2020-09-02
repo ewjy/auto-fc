@@ -1,32 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="zh-tw">
+{% load static %}
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>[Alpha] 消息溯源系統</title>
+  <title>標題對比結果</title>
   <meta content="" name="descriptison">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
-  <link href="assets/vendor/line-awesome/css/line-awesome.min.css" rel="stylesheet">
-  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/icofont/icofont.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/venobox/venobox.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/line-awesome/css/line-awesome.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/owl.carousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Serenity - v2.1.0
@@ -43,33 +43,17 @@
     <div class="container d-flex">
 
       <div class="logo mr-auto">
-        <h1 class="text-light"><a href="index.html">FactsComb<sup>Proto</sup></a></h1>
+        <h1 class="text-light"><a href="{%url 'index' %}">FactsComb<sup>Beta</sup></a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+        <!-- <a href="{% url 'index' %}"><img src="{% static '{% static 'assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li class="active"><a href="index.html">首頁</a></li>
-
-          <li class="drop-down"><a href="#">關於我們</a>
-            <ul>
-              <li><a href="about.html">平台簡介</a></li>
-              <li><a href="team.html">技術團隊</a></li>
-
-              <li class="drop-down"><a href="#">系統介紹</a>
-                <ul>
-                  <li><a href="#">查證系統</a></li>
-                  <li><a href="#">回溯系統</a></li>
-                  <li><a href="#">原始碼倉庫</a></li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li><a href="#features">功能</a></li>
-          <li><a href="blog.html">查核資料庫</a></li>
-          <li><a href="portfolio.html">聯絡我們</a></li>
-
+          <li><a href="{% url 'index' %}">首頁</a></li>
+          <li><a href="{% url 'learn' %}">提升識讀力</a></li>                    
+          <li><a href="{% url 'about' %}">關於我們</a></li>          
+      
           <!--<li class="get-started"><a href="#get-started">Get Started</a></li>-->
         </ul>
       </nav><!-- .nav-menu -->
@@ -84,14 +68,14 @@
       <div class="breadcrumb-hero">
         <div class="container">
           <div class="breadcrumb-hero">
-            <h2>【雛形展示】消息溯源系統</h2>
+            <h2>標題對比結果</h2>
           </div>
         </div>
       </div>
       <div class="container">
         <ol>
-          <li><a href="index.html">首頁</a></li>
-          <li>消息溯源系統</li>
+          <li><a href="{% url 'index' %}">首頁</a></li>
+          <li>標題對比結果</li>
         </ol>
       </div>
     </section><!-- End Breadcrumbs -->
@@ -103,9 +87,8 @@
         <div class="col-lg-12 pt-12 pt-lg-0 content">
 
           <div>
-            <h3>根據系統搜尋，該則消息最早可能來自：</h3>
-            <h5><b>網址：</b><u>https://example.com/fake-news.html</u>
-            <br><b>標題：</b><u>震驚！Coding-X第三組竟然做不出東西來！真相是……</u></h5>
+            <h3>根據系統搜尋，該則消息在以下的查核平台已被查核過：</h3>
+            
           </div>
 
         </div>
@@ -163,13 +146,11 @@
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Useful Links</h4>
+            <h4>本站鏈結</h4>
             <ul>
-              <li><a href="#">首頁</a></li>
-              <li><a href="#">關於我們</a></li>
-              <li><a href="#">系統運作儀表板</a></li>
-              <li><a href="#">使用條款</a></li>
-              <li><a href="#">Privacy policy</a></li>
+              <li><a href="{%url 'index' %}">首頁</a></li>
+              <li><a href="{%url 'learn' %}">提升識讀力</a></li>
+              <li><a href="{%url 'about' %}">關於我們</a></li>            
             </ul>
           </div>
 
@@ -183,23 +164,7 @@
               <strong>Email:</strong> example@email.ncku.edu.tw<br>
             </p>
 
-            <!--<div class="social-links">
-              <a href="#" class="twitter"><i class="icofont-twitter"></i></a>
-              <a href="#" class="facebook"><i class="icofont-facebook"></i></a>
-              <a href="#" class="instagram"><i class="icofont-instagram"></i></a>
-              <a href="#" class="google-plus"><i class="icofont-skype"></i></a>
-              <a href="#" class="linkedin"><i class="icofont-linkedin"></i></a>
-            </div>-->
-
           </div>
-
-          <!--<div class="col-lg-3 col-md-6 footer-newsletter">
-            <h4>Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna veniam enim veniam illum dolore legam minim quorum culpa amet magna export quem marada parida nodela caramase seza.</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
-          </div>-->
 
         </div>
       </div>
@@ -222,19 +187,19 @@
   <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/jquery/jquery.min.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
-  <script src="assets/vendor/counterup/counterup.min.js"></script>
-  <script src="assets/vendor/venobox/venobox.min.js"></script>
-  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="{% static 'assets/vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/jquery.easing/jquery.easing.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'assets/vendor/waypoints/jquery.waypoints.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/counterup/counterup.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/venobox/venobox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/owl.carousel/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
 
   <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script src="{% static 'assets/js/main.js' %}"></script>
 
 </body>
 

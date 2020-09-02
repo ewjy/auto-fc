@@ -9,3 +9,7 @@ def learn(request):
     return render(request, "learn.html")
 def about(request):
     return render(request, "about.html")
+def results_title(request):
+	return render(request, "results_title.html")
+def results_url(request):
+	return render(request, "results_url.html")
