@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.contrib import admin
 from .models import Factcheck
 import whois
+from urllib.parse import urlparse
 # Create your views here.
 def index(request):
 	return render(request, "index.html")
@@ -22,10 +23,9 @@ def results_title(request):
 def results_url(request):
     if 'href' in request.GET:
         href = request.GET['href']
-        domain = whois.query('href')
+        domain = urlparse(href).netloc
+        data = whois.whois(domain)
     context = {
-        'name' : domain.name,
-        'last_upgrade' : domain.last_upgrade,
-        'expiration_date' : domain.expiration_date
+        'data' : data
     }
-	return render(request, "results_url.html",context)
+    return render(request, "results_url.html",context)

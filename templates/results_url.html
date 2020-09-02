@@ -108,7 +108,7 @@
 
           <div>
             <h5>
-              該網站由來自A國<!--{ get WHOIS country }-->的XXX<!--{ get WHOIS registrant }-->註冊。<br>（根據WHOIS判斷）<br>
+              該網站由來自{{ data.country }}的{{ data.name }}註冊。<br>（根據WHOIS判斷）<br>
               <button type="button" class="btn btn-info" onclick="window.open('https://who.is/whois/example.com<!--{ get query domain }-->', '_blank')">查看詳細的網域WHOIS資料</button>  				
 				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#WHOIS">
   等等！WHOIS什麼？
