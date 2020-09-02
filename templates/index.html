@@ -62,28 +62,47 @@
   </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero">
+	<section id="hero">
     <div class="hero-container" data-aos="fade-up">
-      <h1>自動化資訊查核追踨平台</h1>
-      <h2>為你快速分析資訊，提供初步判斷方向。</h2> 
+      <h1>自動化資訊查核追踨系統</h1>
+      <h2>為你快速分析資訊，提供初步判斷方向。</h2>	
+
+<!-- 標題搜尋框 -->
 <form action="{% url 'results_title' %}">
 <div class="input-group">
-  <div class="input-group-prepend">
-  <select class="form-control">
-    <option>標題</option>
-    <option>網址</option>
-  </select>
-
-  </div>
-  <input type="text" name="query" class="form-control" placeholder="請輸入查詢內容">
-  <div class="input-group-append">
+  <input type="text" name="query" class="form-control" placeholder="以標題關鍵字查詢">
+	<div class="input-group-append">
       <button class="btn btn-secondary" type="submit">
         <i class="icofont-search"></i>
       </button>
+	</div>
 </div>
-    </div>
-  </form>
-  </section><!-- End Hero -->
+</form>
+
+<p></p>
+
+<!-- 網址搜尋框 -->
+<form action="{% url 'results_url' %}">
+<div class="input-group">
+  <input type="text" name="href" class="form-control" placeholder="以來源網址查詢">
+	<div class="input-group-append">
+      <button class="btn btn-secondary" type="submit">
+        <i class="icofont-search"></i>
+      </button>
+	</div>
+</div>
+</form>
+
+<!--未來再改
+  <div class="input-group-prepend">
+  <select class="form-control">
+    <option value="title">標題</option>
+    <option value="url">網址</option>
+  </select>
+
+  </div>-->
+
+	</section><!-- End Hero -->
 
   <main id="main">
 
@@ -131,7 +150,7 @@
               <p class="description">提供多項深入資訊（是否為內容農場文章、網站持有人、網站IP位址），讓你即使不會使用WHOIS之類的工具，也能獲得這些資訊。</p>
             </div>
           </div>
-      <div class="col-md-6">
+		  <div class="col-md-6">
             <div class="icon-box" data-aos="fade-up">
               <div class="icon"><i class="las la-eye" style="color: #e9bf06;"></i></div>
               <h4 class="title">培養媒體識讀</h4>
@@ -142,7 +161,7 @@
 
       </div>
     </section><!-- End Services Section -->
-    
+	  
     <!-- ======= Cta Section ======= -->
     <section id="cta" class="cta">
       <div class="container" data-aos="fade-in">
@@ -165,7 +184,7 @@
 
           <div class="col-lg-3 col-md-6 footer-info">
             <h3>FactsComb</h3>
-            <p>本項目是國立成功大學第十學院2020年暑期Coding-X課程小組專案的成果。</p>
+            <p>本項目是國立成功大學2020年Coding-X課程小組專案的成果。</p>
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
@@ -184,7 +203,7 @@
               701401台南市東區大學路1號<br>
               國立成功大學 <br>
               <strong>電話：</strong>06-2757575<br>
-              <strong>Email:</strong> example@email.ncku.edu.tw<br>
+              <strong>Email:</strong> codingx.ncku@gmail.com<br>
             </p>
 
           </div>
@@ -223,63 +242,6 @@
 
   <!-- Template Main JS File -->
   <script src="{% static 'assets/js/main.js' %}"></script>
-<!-- The Modal -->
-  <div class="modal fade" id="fact-warn">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-      
-        <!-- Modal Header -->
-        <div class="modal-header">
-          <h4 class="modal-title"><font color="orange">對應到查核報告</font></h4>
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-        </div>
-        
-        <!-- Modal body -->
-        <div class="modal-body">
-          系統對應到以下可能相關的查核報告：
-      <p><a href="https://tfc-taiwan.org.tw/articles/4092" target="_blank">[TFC] 【部分錯誤】網傳訊息宣稱「研究證明：Covid-19 已產生為名爲“D614G”的突變...導致病毒傳染力暴增10倍以上」？</a><br><a href="https://www.mygopen.com/2020/07/d614g-covid-19.html" target="_blank">[MyGoPen] 【誤導】研究證明Covid-19突變為D614G病毒？傳染力暴增10倍？部分錯誤</a></p>
-        </div>
-        
-        <!-- Modal footer -->
-        <div class="modal-footer">
-      <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#cf-warn">查看詳情</button>
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
-        </div>
-        
-      </div>
-    </div>
-  </div>
-
-<!-- The Modal -->
-  <div class="modal fade" id="cf-warn">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-      
-        <!-- Modal Header -->
-        <div class="modal-header">
-          <h4 class="modal-title"><font color="red">內容農場警告</font></h4>
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-        </div>
-        
-        <!-- Modal body -->
-        <div class="modal-body">
-          <p>警告：內容農場網站也有相關文章，請慎重判斷！</p>
-      <p>https://kknews.cc/health/pb9zo62.html<br>新冠重要發現：需警惕！多個研究團隊發現，發生D614G突變的新冠病毒，感染人類細胞的能力或提高9倍左右</p>
-    <p></p>
-    <p>若上方沒有列出您在尋找的資訊，可以選擇進一步追蹤。</p>
-        </div>
-        
-        <!-- Modal footer -->
-        <div class="modal-footer">
-      <button type="button" class="btn btn-primary" onclick="location.href='search.html'" data-dismiss="modal">進一步追蹤</button>
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
-        </div>
-        
-      </div>
-    </div>
-  </div>
-
-
 </body>
 
 </html>

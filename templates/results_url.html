@@ -109,7 +109,10 @@
           <div>
             <h5>
               該網站由來自A國<!--{ get WHOIS country }-->的XXX<!--{ get WHOIS registrant }-->註冊。<br>（根據WHOIS判斷）<br>
-              <button type="button" class="btn btn-info" onclick="window.open('https://who.is/whois/example.com<!--{ get query domain }-->', '_blank')">查看詳細的網域WHOIS資料</button>              
+              <button type="button" class="btn btn-info" onclick="window.open('https://who.is/whois/example.com<!--{ get query domain }-->', '_blank')">查看詳細的網域WHOIS資料</button>  				
+				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#WHOIS">
+  等等！WHOIS什麼？
+</button>
             </h5>            
           </div>
 
@@ -127,6 +130,9 @@
             <h5>
               該網站架設在C國<!--{ get IP country }-->的YYY公司<!--{ get IP ISP }-->，<br>IP位址是1XX.XXX.XX.X。<!--{ get nslookup IP }--><br>（根據nslookup判斷）<br>
               <button type="button" class="btn btn-info" onclick="window.open('https://www.iplocation.net/ip-lookup?query=140.116.241.66<!--{ get nslookup IP }-->', '_blank')">查看IP位址的詳細資料</button>
+			  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#nslookup">
+  等等！nslookup又是什麼？
+</button>
             </h5>
           </div>
 
@@ -205,6 +211,46 @@
 
   <!-- Template Main JS File -->
   <script src="{% static 'assets/js/main.js' %}"></script>
+
+<!-- WHOIS Modal -->
+<div class="modal fade" id="WHOIS" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="WHOISTitle">什麼是WHOIS？</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        blablablablabla
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">返回</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- nslookup Modal -->
+<div class="modal fade" id="nslookup" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="nslookupTitle">什麼是nslookup？</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        blablablablabla
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">返回</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 </body>
 
