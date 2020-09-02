@@ -9,6 +9,7 @@ from __future__ import unicode_literals
 from django.db import models
 
 class Factcheck(models.Model):
+	
     title = models.TextField(primary_key=True)# Field name made lowercase.
     website = models.TextField()# Field name made lowercase.
     class Meta:

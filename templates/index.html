@@ -65,18 +65,18 @@
   <section id="hero">
     <div class="hero-container" data-aos="fade-up">
       <h1>自動化資訊查核追踨平台</h1>
-      <h2>為你快速分析資訊，提供初步判斷方向。</h2>	
+      <h2>為你快速分析資訊，提供初步判斷方向。</h2> 
 <div class="input-group">
   <div class="input-group-prepend">
-    <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">請選擇項目</button>
-    <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">標題</a>
-      <a class="dropdown-item" href="#">網址</a>
-    </div>
+  <select class="form-control">
+    <option>標題</option>
+    <option>網址</option>
+  </select>
+
   </div>
-  <input type="text" class="form-control" placeholder="請輸入查詢內容">
+  <input type="text" name="contents" class="form-control" placeholder="請輸入查詢內容">
   <div class="input-group-append">
-      <button class="btn btn-secondary" type="button">
+      <button class="btn btn-secondary" type="submit">
         <i class="icofont-search"></i>
       </button>
 </div>
@@ -129,7 +129,7 @@
               <p class="description">提供多項深入資訊（是否為內容農場文章、網站持有人、網站IP位址），讓你即使不會使用WHOIS之類的工具，也能獲得這些資訊。</p>
             </div>
           </div>
-		  <div class="col-md-6">
+      <div class="col-md-6">
             <div class="icon-box" data-aos="fade-up">
               <div class="icon"><i class="las la-eye" style="color: #e9bf06;"></i></div>
               <h4 class="title">培養媒體識讀</h4>
@@ -140,7 +140,7 @@
 
       </div>
     </section><!-- End Services Section -->
-	  
+    
     <!-- ======= Cta Section ======= -->
     <section id="cta" class="cta">
       <div class="container" data-aos="fade-in">
@@ -235,12 +235,12 @@
         <!-- Modal body -->
         <div class="modal-body">
           系統對應到以下可能相關的查核報告：
-		  <p><a href="https://tfc-taiwan.org.tw/articles/4092" target="_blank">[TFC] 【部分錯誤】網傳訊息宣稱「研究證明：Covid-19 已產生為名爲“D614G”的突變...導致病毒傳染力暴增10倍以上」？</a><br><a href="https://www.mygopen.com/2020/07/d614g-covid-19.html" target="_blank">[MyGoPen] 【誤導】研究證明Covid-19突變為D614G病毒？傳染力暴增10倍？部分錯誤</a></p>
+      <p><a href="https://tfc-taiwan.org.tw/articles/4092" target="_blank">[TFC] 【部分錯誤】網傳訊息宣稱「研究證明：Covid-19 已產生為名爲“D614G”的突變...導致病毒傳染力暴增10倍以上」？</a><br><a href="https://www.mygopen.com/2020/07/d614g-covid-19.html" target="_blank">[MyGoPen] 【誤導】研究證明Covid-19突變為D614G病毒？傳染力暴增10倍？部分錯誤</a></p>
         </div>
         
         <!-- Modal footer -->
         <div class="modal-footer">
-		  <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#cf-warn">查看詳情</button>
+      <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#cf-warn">查看詳情</button>
           <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
         </div>
         

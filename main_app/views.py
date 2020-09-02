@@ -4,10 +4,6 @@ from .models import Factcheck
 # Create your views here.
 def index(request):
 	data = Factcheck.objects.all()
-	context = {
-			'data' : data.Title,
-			'website' : data.Website,
-	}
 	return render(request, "index.html")
 def learn(request):
     return render(request, "learn.html")
