@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.contrib import admin
 from .models import Factcheck
+import whois
 # Create your views here.
 def index(request):
 	return render(request, "index.html")
@@ -19,4 +20,12 @@ def results_title(request):
 	}
 	return render(request, "results_title.html",context)
 def results_url(request):
-	return render(request, "results_url.html")
+    if 'href' in request.GET:
+        href = request.GET['href']
+        domain = whois.query('href')
+    context = {
+        'name' : domain.name,
+        'last_upgrade' : domain.last_upgrade,
+        'expiration_date' : domain.expiration_date
+    }
+	return render(request, "results_url.html",context)
