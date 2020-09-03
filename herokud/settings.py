@@ -21,7 +21,7 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '^yz+0)t9t2w_gp7!&5vsff+8*7n-itj833v12%b-m%fam6l6s3'
+SECRET_KEY = 'hidden'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -80,11 +80,11 @@ pymysql.install_as_MySQLdb()
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'bgo2e3lphrhct0o5',
-        'HOST': 'phtfaw4p6a970uc0.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
-        'POST': '3306',
-        'USER': 'g071z7239pumo4g2',
-        'PASSWORD': 'ahg3m8d13kl4088p',
+        'NAME': 'hidden',
+        'HOST': 'hidden',
+        'POST': 'hidden',
+        'USER': 'hidden',
+        'PASSWORD': 'hidden',
     }
 }
 

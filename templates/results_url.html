@@ -82,15 +82,15 @@
 
     <!-- ======= About Section ======= -->
     <section id="about" class="about">
-      <div class="container" data-aos="fade-up">
+      <!--<div class="container" data-aos="fade-up">
 
         <div class="col-lg-12 pt-12 pt-lg-0 content">
-<!--{ if content_farm == 1 }-->
+{ if content_farm == 1 }
           <div>
             <h3>警告：根據您輸入的網址，該網站屬於內容農場，接收消息時請慎重判斷！</h3>
             
           </div>
-<!--{ else }-->
+{ else }
           <div>
             <h3>根據您輸入的網址，該網站應該不屬於內容農場，不過您仍可參考下方的其他資訊作進一步判斷。</h3>
             
@@ -100,7 +100,7 @@
 
       </div>
 
-      <p></p>
+      <p></p>-->
 
       <div class="container" data-aos="fade-up">
 
@@ -108,8 +108,8 @@
 
           <div>
             <h5>
-              該網站由來自{{ data.country }}的{{ data.name }}註冊。<br>（根據WHOIS判斷）<br>
-              <button type="button" class="btn btn-info" onclick="window.open('https://who.is/whois/example.com<!--{ get query domain }-->', '_blank')">查看詳細的網域WHOIS資料</button>  				
+              <b>您輸入的網址的主網域名稱是：<u>{{ data.domain }}</u></b><br>該網站由來自<u>{{ data.country }}</u>的<u>{{ data.name }}</u>註冊。<br>（根據WHOIS判斷）<br>
+              <button type="button" class="btn btn-info" onclick="window.open('https://who.is/whois/{{ data.domain }}', '_blank')">查看{{ data.domain }}的詳細WHOIS資料</button>  				
 				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#WHOIS">
   等等！WHOIS什麼？
 </button>
@@ -128,8 +128,8 @@
 
           <div>
             <h5>
-              該網站架設在C國<!--{ get IP country }-->的YYY公司<!--{ get IP ISP }-->，<br>IP位址是1XX.XXX.XX.X。<!--{ get nslookup IP }--><br>（根據nslookup判斷）<br>
-              <button type="button" class="btn btn-info" onclick="window.open('https://www.iplocation.net/ip-lookup?query=140.116.241.66<!--{ get nslookup IP }-->', '_blank')">查看IP位址的詳細資料</button>
+              該網站架設在<u>{{ ip_country }}</u>的<u>{{ ip_org }}</u>，<br><b>IP位址是<u>{{ ip_record }}</u></b>。<!--{ get nslookup IP }--><br>（根據nslookup判斷）<br>
+              <button type="button" class="btn btn-info" onclick="window.open('https://www.iplocation.net/ip-lookup?query={{ ip_record }}', '_blank')">查看{{ ip_record }}的詳細資料</button>
 			  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#nslookup">
   等等！nslookup又是什麼？
 </button>
