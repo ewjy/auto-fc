@@ -43,14 +43,14 @@
     <div class="container d-flex">
 
       <div class="logo mr-auto">
-        <h1 class="text-light"><a href="{% url 'index' %}">FactsComb<sup>Beta</sup></a></h1>
+        <h1 class="text-light"><a href="{% url 'index' %}">FactsComb</a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="{% url 'index' %}"><img src="{% static 'assets/img/logo.png' %}" alt="" class="img-fluid"></a>-->
       </div>
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li><a href="/index/">首頁</a></li>
+          <li><a href="{% url 'index' %}">首頁</a></li>
           <li><a href="{% url 'learn' %}">提升識讀力</a></li>                    
           <li class="active"><a href="{% url 'about' %}">關於我們</a></li>          
 			
@@ -100,7 +100,7 @@
 			  在這個假資訊氾濫的背景下，許多資訊查核平台也陸續出現，眾多的選擇難免令人眼花撩亂。因此本平台整合各查核平台的資訊，讓閱聽人能方便查核資訊，並獲得更深入的相關資訊，也蒐集網路上的優質影片和文章，幫助大眾提升媒體識讀能力。
 			  </p>
             <p>
-              注意：本系統目前仍處測試階段，無法保證所有輸出結果準確無誤，請以專業查核機構發表的最終報告為準。
+              注意：本系統無法保證所有輸出結果準確無誤，請以專業查核機構發表的最終報告為準。
             </p>
           </div>
 
@@ -199,7 +199,7 @@
 
           <div class="col-lg-3 col-md-6 footer-info">
             <h3>FactsComb</h3>
-            <p>本項目是國立成功大學第十學院2020年暑期Coding-X課程小組專案的成果。</p>
+            <p>本項目是國立成功大學2020年Coding-X課程小組專案的成果。</p>
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
@@ -218,7 +218,7 @@
               701401台南市東區大學路1號<br>
               國立成功大學 <br>
               <strong>電話：</strong>06-2757575<br>
-              <strong>Email:</strong> example@email.ncku.edu.tw<br>
+              <strong>Email:</strong> codingx.ncku@gmail.com<br>
             </p>
 
           </div>
