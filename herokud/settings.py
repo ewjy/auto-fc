@@ -80,11 +80,11 @@ pymysql.install_as_MySQLdb()
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'fake_news',
-        'HOST': '127.0.0.1',
+        'NAME': 'bgo2e3lphrhct0o5',
+        'HOST': 'phtfaw4p6a970uc0.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
         'POST': '3306',
-        'USER': 'root',
-        'PASSWORD': 'SEVENteen=13',
+        'USER': 'g071z7239pumo4g2',
+        'PASSWORD': 'ahg3m8d13kl4088p',
     }
 }
 
